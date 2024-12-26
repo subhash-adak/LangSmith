@@ -16,12 +16,16 @@ openai_api_key = os.getenv("OPENAI_API_KEY")
 # groq_api_key = os.getenv("GROQ_API_KEY")      # Optional: Uncomment if using Groq LLM
 langchain_api_key = os.getenv("LANGCHAIN_API_KEY")
 
+# Get Project Name from environment variables
+project_name = os.getenv("LANGCHAIN_PROJECT")
+
 # Set API keys as environment variables
 os.environ["OPENAI_API_KEY"] = openai_api_key
 # os.environ["GROQ_API_KEY"] = groq_api_key       # Optional: Uncomment if using Groq LLM
 os.environ["LANGCHAIN_API_KEY"] = langchain_api_key
+
 os.environ["LANGCHAIN_TRACING_V2"] = "true"  # Enable tracing for Langchain
-os.environ["LANGCHAIN_PROJECT"] = "LangSmithTracing"  # Set project name
+os.environ["LANGCHAIN_PROJECT"] = project_name   
 
 # Initialize the OpenAI model (uncomment ChatGroq initialization if needed)
 llm = ChatOpenAI(
