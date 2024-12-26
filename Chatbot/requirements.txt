@@ -1,0 +1,8 @@
+langchain 
+langchain_openai
+langchain_groq 
+langchain_community 
+langgraph 
+langsmith 
+typing-extensions
+python_dotenv
